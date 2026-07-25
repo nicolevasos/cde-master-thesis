@@ -116,16 +116,14 @@ a {
 
 .context-objectives .section-backdrop {
   background:
-    linear-gradient(90deg, rgba(243, 245, 244, .97) 0%, rgba(243, 245, 244, .94) 58%, rgba(243, 245, 244, .88) 100%),
-    url("../pics/dashboard/slide-13.jpg") right center / 760px auto no-repeat;
+    linear-gradient(90deg, rgba(243, 245, 244, .97) 0%, rgba(243, 245, 244, .94) 58%, rgba(243, 245, 244, .88) 100%);
   opacity: .05;
   filter: saturate(.92);
 }
 
 .context-downloads .section-backdrop {
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, .97) 0%, rgba(255, 255, 255, .95) 55%, rgba(255, 255, 255, .88) 100%),
-    url("../pics/dashboard/slide-15.jpg") right center / 820px auto no-repeat;
+    linear-gradient(90deg, rgba(255, 255, 255, .97) 0%, rgba(255, 255, 255, .95) 55%, rgba(255, 255, 255, .88) 100%);
   opacity: .04;
   filter: saturate(.9);
 }
@@ -909,7 +907,7 @@ a {
 
 .downloads a {
   display: grid;
-  grid-template-columns: 56px 1fr;
+  grid-template-columns: 56px 1fr auto;
   gap: 16px;
   align-items: center;
   padding: 22px;
@@ -1553,10 +1551,6 @@ footer a {
   min-width: 0;
   margin: 0;
 }
-.downloads a {
-  grid-template-columns: 56px 1fr auto;
-}
-
 .download-arrow {
   color: var(--orange);
 }
