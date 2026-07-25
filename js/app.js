@@ -61,8 +61,8 @@ const phases = [
   {
     phase: 'P4 · Additional evidence',
     title: 'Enrich decisions with Earth Observation and GeoAI',
-    copy: 'Integrate Sentinel-2, S2DR3, SAM4EO and contextual layers to improve boundary understanding and provide value beyond compliance.',
-    points: ['Super-resolution and segmentation', 'NDVI and land-cover indicators', 'Explainable multi-source evidence'],
+    copy: 'Integrate semantic and contextual layers to improve boundary understanding and provide value beyond compliance.',
+    points: ['Local Biomass and cadastral Layers', 'SRTM score', 'Explainable multi-source evidence'],
     visual: ['EO + AI', 'INSIGHTS']
   }
 ];
@@ -129,7 +129,6 @@ if (galleryImage) {
       const slide = slides[slideNumber];
       galleryImage.src = `pics/dashboard/slide-${slideNumber}.jpg`;
       galleryImage.alt = slide.alt;
-      document.getElementById('gallery-kicker').textContent = slide.k;
       document.getElementById('gallery-title').textContent = slide.t;
       document.getElementById('gallery-description').textContent = slide.d;
       document.getElementById('gallery-tags').innerHTML = slide.tags.map(tag => `<span>${tag}</span>`).join('');

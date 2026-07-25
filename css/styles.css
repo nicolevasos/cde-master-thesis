@@ -197,9 +197,9 @@ a {
 .section.dark {
   background:
     linear-gradient(180deg,
-      rgba(16, 38, 32, 0.97),
-      rgba(16, 38, 32, 0.892),
-      rgba(16, 38, 32, 0.885)),
+      #102620d7,
+      rgba(16, 38, 32, 0.709),
+      rgba(16, 38, 32, 0.41)),
     url("../pics/c1.jpg") center / cover no-repeat;
 
   color: #ffffff;
@@ -638,7 +638,17 @@ a {
 
 .pipeline-nav {
   display: grid;
-  grid-template-columns: repeat(5, 1fr)
+  grid-template-columns: repeat(5, 1fr);
+  overflow: hidden;
+  border-radius: 27px 27px 0 0;
+}
+
+.pipeline-nav button:first-child {
+  border-top-left-radius: 27px;
+}
+
+.pipeline-nav button:last-child {
+  border-top-right-radius: 27px;
 }
 
 .pipeline-nav button {
@@ -817,8 +827,9 @@ a {
 
 .context-impact .section-backdrop {
   background:
-    linear-gradient(90deg, rgba(243, 245, 244, .95) 0%, rgba(243, 245, 244, .86) 100%, rgba(243, 245, 244, .74) 100%),
-    url("../pics/ppl.jpg") center no-repeat;
+  radial-gradient(circle at 12% 16%, rgba(106, 150, 115, 0.18), transparent 20%), 
+    linear-gradient(258deg, rgba(243, 245, 244, .95) 0%, rgba(243, 245, 244, .86) 100%, rgba(243, 245, 244, .74) 100%),
+    url("../pics/ppl.jpg") top no-repeat;
   opacity: 98;
 }
 
@@ -1244,7 +1255,7 @@ footer a {
 
 .contact-kicker {
   margin: 0 0 24px;
-  color: #9eb2a6;
+  color: var(--orange);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -1419,7 +1430,8 @@ footer a {
 }
 
 .pipeline-workflow-figure {
-  margin: 0;
+  margin: 0px;
+  padding-top: 30px;
 }
 
 .pipeline-workflow-scroll {
@@ -1451,7 +1463,6 @@ footer a {
 .pipeline-workflow-scroll img {
   display: block;
   width: 100%;
-  min-width: 1180px;
   height: auto;
   border-radius: 14px;
 }
@@ -1541,4 +1552,11 @@ footer a {
 .prototype-showcase {
   min-width: 0;
   margin: 0;
+}
+.downloads a {
+  grid-template-columns: 56px 1fr auto;
+}
+
+.download-arrow {
+  color: var(--orange);
 }
