@@ -172,6 +172,14 @@ a {
   transform: scaleX(1)
 }
 
+.nav a.active {
+  color: var(--text)
+}
+
+.nav a.active::after {
+  transform: scaleX(1)
+}
+
 .menu-button {
   display: none;
   border: 1px solid var(--line-strong);
@@ -583,10 +591,28 @@ a {
 .context-about .section-backdrop {
   background:
     radial-gradient(circle at 88% 14%, rgba(217, 138, 75, .18), transparent 16%),
-    radial-gradient(circle at 14% 84%, rgba(45, 90, 73, .11), transparent 18%),
+    radial-gradient(circle at 14% 84%, rgba(213, 177, 121, 0.11), transparent 18%),
     linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .35) 100%);
   opacity: .22;
   filter: saturate(.9);
+}
+
+.context-conclusion .section-backdrop {
+  background:
+    linear-gradient(0deg, rgba(255, 187, 114, 0.574) 0%, rgba(255, 255, 255, .35) 100%);
+  opacity: .55;
+  filter: saturate(.9);
+}
+
+.conclusion-close {
+  max-width: 62ch;
+  margin: 54px auto 0;
+  text-align: center;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--muted);
+  position: relative;
+  z-index: 1;
 }
 
 .objective-list {
@@ -1553,4 +1579,13 @@ footer a {
 }
 .download-arrow {
   color: var(--orange);
+}
+
+.conclusion-close::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--line);
+  margin: 0 auto 44px;
 }
